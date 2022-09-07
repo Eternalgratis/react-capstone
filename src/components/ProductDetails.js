@@ -1,17 +1,22 @@
+/* eslint-disable */
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { getProductDetail, fetchProducts } from '../redux/productApi';
+import { fetchProducts } from '../redux/productApi';
+import { getProductDetails } from '../redux/productDetails';
 
 const ProductDetails = () => {
   const { id } = useParams();
-  const { product } = useSelector((state) => state.products);
+  const { product } = useSelector((state) => state.productDetail);
   const dispatch = useDispatch();
   console.log(product);
 
   useEffect(() => {
-    dispatch(fetchProducts());
-    dispatch(getProductDetail(1));
+    dispatch(fetchProducts())
+      .unwrap()
+      .then((result => {
+        dispatch(getProductDetails({products: result, id: Number(id)}))
+      }))
   }, []);
   return (
     <div id={product.id}>

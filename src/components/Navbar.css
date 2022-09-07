@@ -1,0 +1,12 @@
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.micImage {
+    width: 20px;
+}
+
+.settingIcon {
+    width: 40px;
+}
