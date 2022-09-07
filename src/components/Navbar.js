@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -6,7 +7,7 @@ const Navbar = () => (
     <h2>Logo</h2>
     <nav>
       <NavLink to="/">Home</NavLink>
-      <NavLink to="/Products">Product</NavLink>
+      {location.pathname === '/' ? 'HOME' : 'GO BACK'}
     </nav>
   </header>
 );

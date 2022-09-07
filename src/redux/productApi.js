@@ -1,15 +1,6 @@
+/* eslint-disable */
 const URL = 'https://fakestoreapi.com/products';
 const LOAD_PRODUCT = 'LOAD_PRODUCT';
-const UPDATE_PRODUCT = 'UPDATE_PRODUCT';
-const DELETE_PRODUCT = 'DELETE_PRODUCT';
-
-const productApi = () => async (dispatch) => {
-  await fetch(URL)
-  .then((res) => console.log(res.json()))
-  .then((data) => { dispatch(loadProduct(data)) });
-
-};
-
 
 // Actions creators
 export const loadProduct = (payload) => ({
@@ -17,14 +8,21 @@ export const loadProduct = (payload) => ({
   payload,
 });
 
-export const updateProduct = (payload) => ({
-  type: UPDATE_PRODUCT,
-  payload,
-});
+const productApi = async () => {
+  const products = await fetch(URL);
+  const data = await products.json();
+  console.log(data);
+  return data;
+};
+console.log(productApi());
 
-export const deleteProduct = (id) => ({
-  type: DELETE_PRODUCT,
-  payload,
-});
+export const productReducer = (state = [], action) => {
+  switch (action.type) {
+    case LOAD_PRODUCT:
+      return action.payload;
+    default:
+      return state;
+  }
+};
 
 export default productApi;
