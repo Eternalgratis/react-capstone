@@ -1,13 +1,12 @@
 /* eslint-disable */
-import { configureStore, combineReducers } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import productReducer from './productApi';
 
-const rootReducer = combineReducers({
-  product: productReducer,
-});
-
 const store = configureStore({
-  reducer: rootReducer,
+
+  reducer: {
+    products: productReducer,
+  },
 });
 
 export default store;

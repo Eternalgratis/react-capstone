@@ -1,28 +1,43 @@
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 /* eslint-disable */
 const URL = 'https://fakestoreapi.com/products';
 const LOAD_PRODUCT = 'LOAD_PRODUCT';
 
-// Actions creators
-export const loadProduct = (payload) => ({
-  type: LOAD_PRODUCT,
-  payload,
-});
-
-const productApi = async () => {
-  const products = await fetch(URL);
-  const data = await products.json();
-  console.log(data);
-  return data;
-};
-console.log(productApi());
-
-export const productReducer = (state = [], action) => {
-  switch (action.type) {
-    case LOAD_PRODUCT:
-      return action.payload;
-    default:
-      return state;
+export const fetchProducts = createAsyncThunk(
+  'fetchProducts',
+  async () => {
+    const response = await fetch(URL);
+    const result = await response.json();
+    return result;
   }
-};
+)
 
-export default productApi;
+export const fetchProductsSlice = createSlice({
+  name: 'fetchProducts',
+  initialState: {
+    products: [],
+    product: {}
+  },
+  reducers: {
+    getProductDetail: (state, action) => {
+      const value = state.products.filter(product => product.id === action.payload)
+      const newState = {
+        ...state,
+        product: value[0]
+      }
+      return newState
+    }
+  },
+  extraReducers: {
+    [fetchProducts.fulfilled]: (state, action) => {
+      const newState = {
+        ...state,
+        products: action.payload,
+      }
+      return newState;
+    }
+  }
+})
+
+export const {getProductDetail} = fetchProductsSlice.actions
+export default fetchProductsSlice.reducer;

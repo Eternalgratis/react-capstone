@@ -1,21 +1,22 @@
 /* eslint-disable */
-const finalProducts = (props) => {
-//   const {
-//     id, title, price, description, category, image, rate, count,
-//   } = props;
-//   return (
-//     <div>
-//       <div key={id}>
-//         <h1>{title}</h1>
-//         <p>{price}</p>
-//         <p>{description}</p>
-//         <p>{category}</p>
-//         <img src={image} />
-//         <p>{rate}</p>
-//         <p>{count}</p>
-//       </div>
-//     </div>
-//   );
+import { Link } from 'react-router-dom';
+
+
+const FinalProducts = (props) => {
+  const {
+    id, title, price, image,
+  } = props;
+  return (
+    <Link to={`/product/${id}`}>
+        <div id={id}>
+        <div>
+            <h1>{title}</h1>
+            <p>{price}</p>
+            <img src={image} width="200px" height="200px"/>
+        </div>
+        </div>
+    </Link>
+  );
 };
 
-export default finalProducts;
+export default FinalProducts;
