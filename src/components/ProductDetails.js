@@ -4,7 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchProducts } from '../redux/productApi';
 import { getProductDetails } from '../redux/productDetails';
-import './HomePage.css';
+import './productDetails.css';
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -19,17 +19,26 @@ const ProductDetails = () => {
         dispatch(getProductDetails({products: result, id: Number(id)}))
       }))
   }, []);
+
+  const unit = "$"
   return (
     <div id={product.id}>
-      <div className='details-container'>
-        <Link to="/" >
+       <Link to="/" >
           <button>Go back</button>
         </Link>
-        <h1>{product.title}</h1>
-        <p>{product.price}</p>
-        <img src={product.image} alt={product.title} />
+      <div className='details-container'>
+        <img src={product.image} 
+        alt={product.title} 
+        style={{width: "400px", height: "800px"}}
+        />
+        <div className='sub-cont'>
+        <h1 className='head'>{product.title}</h1>
+        <p className='text-1'>{product.description}</p>
+        <p className='text'>{unit + " " + product.price}</p>
+        <span className='cart'> Add to cart </span>
+        </div>
+        </div>
       </div>
-    </div>
   );
 };
 

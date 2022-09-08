@@ -1,0 +1,52 @@
+button {
+  font-size: 30px;
+  margin: 10px;
+  width: 150px;
+  border-radius: 80px;
+}
+
+.sub-cont {
+    padding: 12px;
+    width: 30%;
+    height: 30%;
+}
+
+.text {
+    font-size: 35px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.text-1 {
+    font-size: 35px;
+    color: #000;
+    margin: 20px 0;
+}
+
+.head {
+    font-size: 45px;
+    color: #000;
+}
+
+.cart {
+    border: 1px solid grey;
+    background-color:rgb(152, 155, 146);
+    color: #fff;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    width: 100px;
+    padding: 8px;
+    border-radius: 30px;
+}
+
+.details-container {
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: 25px auto;
+    display: flex;
+    padding: 0;
+}

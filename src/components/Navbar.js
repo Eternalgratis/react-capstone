@@ -8,7 +8,8 @@
 const Navbar = () => (
   <header>
     <nav>
-      <NavLink to="/">Home</NavLink>
+    <h1>E-commerce website</h1>
+      {/* <NavLink to="/">Home</NavLink> */}
     </nav>
     <div className='images'>
       <img src={micIcon} alt='microphone' className='micImage' />

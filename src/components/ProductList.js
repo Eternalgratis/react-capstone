@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import {fetchProducts} from '../redux/productApi';
 import FinalProducts from './finalProduct';
+import './HomePage.css';
 
 const ProductList = () => {
   const [searchTerm, setSearchTerm] = useState('')
@@ -19,23 +20,30 @@ const ProductList = () => {
   }
   
   return (
-    <div>
-      <input 
-      type="text" name="search" 
-      className="search" 
-      placeholder="Search Item" 
-      value={searchTerm} onChange={handleChange} 
-      />
+    <div className="list-container">
+      <div className='input-container'>
+        <input 
+        type="text" name="search" 
+        placeholder="Search Item" 
+        className="search"
+        value={searchTerm} onChange={handleChange} 
+        />
+      </div>
+      
+      <div className="allList-container">
+
           {filteredProducts.map((product) => (
             <FinalProducts 
             id={product.id}
             key={product.id}
             title={product.title}
             price={product.price}
+            description={product.description}
             image={product.image}
             />
         ))}
     </div>
+  </div>
   );
 };
 
