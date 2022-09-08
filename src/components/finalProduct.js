@@ -8,8 +8,8 @@ const FinalProducts = (props) => {
   } = props;
   return (
     <Link to={`/product/${id}`}>
-        <div id={id}>
-        <div>
+        <div id={id} className='main-container'>
+        <div className="prod-cont">
             <h1>{title}</h1>
             <p>{price}</p>
             <img src={image} width="200px" height="200px"/>

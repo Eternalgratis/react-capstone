@@ -1,9 +1,10 @@
 /* eslint-disable */
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchProducts } from '../redux/productApi';
 import { getProductDetails } from '../redux/productDetails';
+import './HomePage.css';
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -20,7 +21,10 @@ const ProductDetails = () => {
   }, []);
   return (
     <div id={product.id}>
-      <div>
+      <div className='details-container'>
+        <Link to="/" >
+          <button>Go back</button>
+        </Link>
         <h1>{product.title}</h1>
         <p>{product.price}</p>
         <img src={product.image} alt={product.title} />

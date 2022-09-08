@@ -20,8 +20,12 @@ const ProductList = () => {
   
   return (
     <div>
-      <input type="text" name="search" value={searchTerm} onChange={handleChange} />
-      <h2>Intended product List Page</h2>
+      <input 
+      type="text" name="search" 
+      className="search" 
+      placeholder="Search Item" 
+      value={searchTerm} onChange={handleChange} 
+      />
           {filteredProducts.map((product) => (
             <FinalProducts 
             id={product.id}
