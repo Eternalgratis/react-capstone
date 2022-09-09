@@ -15,7 +15,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://eternalgratis-e-commerce-website.netlify.app/)
+[Live Demo Link](https://eternalgratis-ecommerce-website.netlify.app/)
 
 
 ## GETTING STARTED
