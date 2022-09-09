@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-/* eslint-disable */
+
 const URL = 'https://fakestoreapi.com/products';
 
 export const fetchProducts = createAsyncThunk(
@@ -8,8 +8,8 @@ export const fetchProducts = createAsyncThunk(
     const response = await fetch(URL);
     const result = await response.json();
     return result;
-  }
-)
+  },
+);
 
 export const fetchProductsSlice = createSlice({
   name: 'fetchProducts',
@@ -23,10 +23,10 @@ export const fetchProductsSlice = createSlice({
       const newState = {
         ...state,
         products: action.payload,
-      }
+      };
       return newState;
-    }
-  }
-})
+    },
+  },
+});
 
 export default fetchProductsSlice.reducer;
