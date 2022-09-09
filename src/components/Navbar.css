@@ -1,13 +1,14 @@
 header {
   display: flex;
   justify-content: space-between;
+  background-color: #fff;
 }
 
 .micImage {
-  width: 20px;
+  width: 30px;
   margin-right: 20px;
 }
 
 .settingIcon {
-  width: 40px;
+  width: 60px;
 }
