@@ -1,18 +1,18 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    background-color: aqua;
-  }
+body {
+  background-color: aqua;
+}
 
-   header {
-    margin: 20px;
-    display: flex;
-    font-size: 50px;
-    justify-content: space-around;
+header {
+  margin: 20px;
+  display: flex;
+  font-size: 50px;
+  justify-content: space-around;
 }
 
 .search {
@@ -31,19 +31,19 @@
   width: 50%;
   display: flex;
 }
- 
+
 a {
   text-decoration: none;
 }
 
-header .h2 {
-  size: 30px;
+h2 {
+  font-size: 30px;
   margin: 20px;
 }
 
 .hmpg-container h1 {
   margin: 20px;
-  size: 30px;
+  font-size: 30px;
 }
 
 .images {
@@ -67,17 +67,21 @@ header .h2 {
 .allList-container a:nth-child(4n + 2) {
   background: rgb(180, 102, 128);
 }
+
 .allList-container a:nth-child(4n + 3) {
   background: rgb(78, 13, 35);
 }
 
-  .main-container p {
-    size: 80px;
-    color: #fff;
-  }
+.prod-cont img {
+  border-radius: 10px;
+}
 
-  .main-container h1 {
-    color: #fff;
-    text-decoration: none;
-    color: black;
-  }
+.main-container p {
+  font-size: 80px;
+  color: #fff;
+}
+
+.main-container h1 {
+  text-decoration: none;
+  color: black;
+}

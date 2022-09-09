@@ -9,7 +9,6 @@ const Navbar = () => (
   <header>
     <nav>
     <h1>E-commerce website</h1>
-      {/* <NavLink to="/">Home</NavLink> */}
     </nav>
     <div className='images'>
       <img src={micIcon} alt='microphone' className='micImage' />

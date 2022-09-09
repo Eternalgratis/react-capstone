@@ -1,23 +1,22 @@
-/* eslint-disable */
 import React from 'react';
-import { Routes , Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import Navbar from './components/Navbar';
 import ProductDetails from './components/ProductDetails';
 
 function App() {
   return (
-    <>
+    <Router>
       <Navbar />
       <main>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/product/:id" element={<ProductDetails />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
+        </Routes>
       </main>
-  </>
+    </Router>
   );
-};
+}
 
 // function App() {
 //   return (

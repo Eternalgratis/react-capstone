@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`to test the finalProduct components matches the finalDetails DOM snapshot 1`] = `
+<a
+  href="/product/undefined"
+  onClick={[Function]}
+>
+  <div
+    className="main-container"
+  >
+    <div
+      className="prod-cont"
+    >
+      <img
+        height="200px"
+        width="200px"
+      />
+      <p />
+      <h1 />
+    </div>
+  </div>
+</a>
+`;
