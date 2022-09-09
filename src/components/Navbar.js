@@ -1,13 +1,17 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import micIcon from './images/mic.webp';
+import settingIcon from './images/settingIcon.png';
+import './Navbar.css';
 
 const Navbar = () => (
   <header>
-    <h2>Logo</h2>
     <nav>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/Products">Product</NavLink>
+      <h1>E-commerce website</h1>
     </nav>
+    <div className="images">
+      <img src={micIcon} alt="microphone" className="micImage" />
+      <img src={settingIcon} alt="setting" className="settingIcon" />
+    </div>
   </header>
 );
 

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`to test the productList component matches productList DOM snapshot 1`] = `
+<div
+  className="list-container"
+>
+  <div
+    className="input-container"
+  >
+    <input
+      className="search"
+      name="search"
+      onChange={[Function]}
+      placeholder="Search Item"
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    className="allList-container"
+  />
+</div>
+`;

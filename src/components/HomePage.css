@@ -4,6 +4,83 @@
   box-sizing: border-box;
 }
 
-.hmpg-container {
-  background-color: red;
+body {
+  background-color: aqua;
+}
+
+header {
+  display: flex;
+  font-size: 30px;
+  justify-content: space-around;
+}
+
+.search {
+  margin: 30px;
+  width: 1000px;
+  height: 80px;
+  padding: 5px;
+  justify-content: center;
+  border-radius: 30px;
+  font-size: 30px;
+}
+
+.main-container {
+  padding: 12px;
+  margin: 30px;
+  width: 50%;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 30px;
+  margin: 20px;
+}
+
+.hmpg-container h1 {
+  margin: 20px;
+  font-size: 30px;
+}
+
+.images {
+  gap: 20px;
+}
+
+.allList-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.allList-container a {
+  width: 90%;
+  margin: 0 5%;
+}
+
+.prod-cont {
+  display: flex;
+}
+
+.allList-container a:nth-child(4n + 2) {
+  background: rgb(180, 102, 128);
+}
+
+.allList-container a:nth-child(4n + 3) {
+  background: rgb(78, 13, 35);
+}
+
+.prod-cont img {
+  border-radius: 10px;
+}
+
+.main-container p {
+  font-size: 60px;
+  color: #fff;
+}
+
+.main-container h1 {
+  text-decoration: none;
+  color: black;
 }
