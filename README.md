@@ -15,7 +15,7 @@
 
 ## Live Demo
 
-[Live Demo Link](#)
+[Live Demo Link](https://eternalgratis-e-commerce-website.netlify.app/)
 
 
 ## GETTING STARTED
@@ -56,9 +56,13 @@ Feel free to check the [issues page](../../issues/).
 
 Give a ⭐️ if you like this project!
 
+## Loom video
+[Recorded video](https://www.loom.com/share/f9441868d49b47579ee7ca1e41a5eb39)
+
 ## Acknowledgments
 
--
+[Nelson Sakwa on Behance for design](https://www.behance.net/sakwadesignstudio)
+
 
 ## 📝 License
 
